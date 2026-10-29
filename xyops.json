@@ -1,0 +1,67 @@
+{
+  "type": "xypdf",
+  "version": "1.0",
+  "xyops": "1.1.11",
+  "description": "xyOps Portable Data",
+  "items": [
+    {
+      "type": "plugin",
+      "data": {
+        "title": "Telegram Notify",
+        "type": "action",
+        "enabled": true,
+        "command": "npx -y github:epiksel/xyplug-telegram-alerts#v1.0.0",
+        "script": "",
+        "icon": "message",
+        "notes": "Send xyOps alert (fired/cleared) and job notifications to a Telegram chat via bot.",
+        "params": [
+          {
+            "id": "chat_id",
+            "title": "Chat ID",
+            "type": "text",
+            "required": true,
+            "value": "",
+            "description": "Telegram chat/group/channel ID (e.g. -1001234567890)."
+          },
+          {
+            "id": "thread_id",
+            "title": "Topic (Thread) ID",
+            "type": "text",
+            "value": "",
+            "description": "Optional. Forum topic ID for supergroups."
+          },
+          {
+            "id": "notify_on_clear",
+            "title": "Notify when alert clears",
+            "type": "checkbox",
+            "value": true
+          },
+          {
+            "id": "include_link",
+            "title": "Include xyOps link",
+            "type": "checkbox",
+            "value": true
+          },
+          {
+            "id": "silent",
+            "title": "Silent (no sound)",
+            "type": "checkbox",
+            "value": false
+          },
+          {
+            "id": "silent_on_clear",
+            "title": "Silent on clear",
+            "type": "checkbox",
+            "value": true
+          },
+          {
+            "id": "debug",
+            "title": "Debug (log input JSON)",
+            "type": "checkbox",
+            "value": false
+          }
+        ]
+      }
+    }
+  ]
+}
